@@ -7,7 +7,6 @@
 
 int		ft_printf(const char *format, ...);
 ssize_t	ft_hexa(unsigned long num, char *base);
-ssize_t	ft_hexa_conv(unsigned int c, int index);
 ssize_t	ft_adresse(void *addr);
 ssize_t	ft_putnbr(long nbr);
 ssize_t	ft_put_u_nbr(unsigned int nbr);

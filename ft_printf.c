@@ -18,28 +18,6 @@ ssize_t	ft_adresse(void *addr)
 	return (ft_putstr("0x") + ft_hexa((unsigned long)addr, "0123456789abcdef"));
 }
 
-ssize_t	ft_hexa_conv(unsigned int c, int index)
-{
-	char	*base;
-	size_t	value;
-
-	value = 0;
-	if (index == 1)
-		base = "0123456789abcdef";
-	else
-		base = "0123456789ABCDEF";
-	if (c > 15)
-	{
-		value += ft_hexa_conv(c / 16, index);
-		value += ft_hexa_conv(c % 16, index);
-	}
-	else
-	{
-		value += ft_putchar(base[c]);
-	}
-	return (value);
-}
-
 ssize_t	ft_specifi(const char *str, va_list *args)
 {
 	if (*str == 's')
